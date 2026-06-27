@@ -17,17 +17,21 @@ Un amendement est souvent illisible pour qui n'est pas juriste : « à l'alinéa
 3. **Un score de criticité multi-critères** — l'amendement touche-t-il un principe fondamental ? un large public ? un enjeu budgétaire important ? Une grille transparente hiérarchise l'enjeu réel plutôt que de le résumer.
 4. **Les arguments pour / contre** (optionnel) — synthétisés à partir du débat parlementaire lui-même.
 
-**Approche technique.** Filo IA repose sur un pipeline RAG (Retrieval-Augmented Generation) : le système récupère d'abord les textes de référence pertinents (codes et lois consolidés via Légifrance, dossiers législatifs, amendements via les données ouvertes de l'Assemblée), puis génère ses sorties **uniquement à partir de ces sources**. La résolution de la référence (article ou code visé par l'amendement) garantit que le diff porte sur le bon texte en vigueur. Chaque affirmation pointe vers sa source, ce qui élimine les hallucinations non ancrées.
+**Approche technique.** Filo IA repose sur un modèle de langage renforcé d'un pipeline RAG (Retrieval-Augmented Generation) : le système se base d'abord les textes de référence pertinents (codes et lois consolidés via Légifrance, dossiers législatifs, amendements via les données ouvertes de l'Assemblée), puis génère ses réponses **uniquement à partir de ces sources** pour limiter les risques d'hallucinations.
 
-**Positionnement « IA de confiance ».** Filo IA ne tranche jamais à la place de l'usager et ne juge pas la valeur politique d'un amendement : il rend le texte si lisible que chacun peut juger par lui-même. Le diff est vérifiable par construction, et le score de criticité s'appuie sur des critères explicites et sourcés. L'outil sert ainsi deux usages : accélérer le tri parlementaire, et donner au citoyen les moyens de comprendre — et de vérifier — les enjeux d'un texte.
+**Positionnement « IA de confiance ».** Filo IA ne tranche jamais à la place de l'usager et ne juge pas la valeur politique d'un amendement : il rend le texte lisible pour que chacun puisse juger par lui-même. La réponse est vérifiable par construction, et le score de criticité s'appuie sur des critères explicites et sourcés. L'outil sert ainsi deux usages : accélérer le tri parlementaire, et donner au citoyen les moyens de comprendre — et de vérifier — les enjeux d'un texte.
 
-**Déroulé envisagé sur le hackathon.** Constitution d'un corpus de test d'amendements réels rattachés à leurs textes ; mise en place du pipeline de récupération sur Légifrance et les données AN ; génération du diff avant/après en langage clair ; conception et calcul de la grille de criticité ; interface de consultation sourcée.
+**Déroulé envisagé sur le hackathon.** Constitution d'un corpus de test d'amendements réels rattachés à leurs textes basé sur les données mises à disposition par l'assemblée nationale; mise en place du pipeline ETL sur Légifrance et les données AN ; génération du diff avant/après en langage clair ; conception et calcul de la grille de criticité ; interface de consultation sourcée.
+
+
+**Interface utilisateur.** L'utilisateur se connecte à une home page web. Il a accès aux noms des amemdements et à un bouton pour chacun d'entre eux. Quand il clique sur un bouton, il est redirigé vers une page avec un lien vers la page officielle de la base des amendements de l'assemblée nationale, un résumé textuel en langage compréhensible par tous expliquant en quoi il consiste, son but, et ce que ça implique. **Son positionnement est objectif et non partisant**. La page peut également proposer des graphiques et des chiffres pertinents.
+
 
 ### Image principale
 ![Image principale](images/cover.png)
 
 ### Contributeurs
-- Florent M
+- Florent Mary
 - Jessy Dulche
 
 ### Ressources utilisées

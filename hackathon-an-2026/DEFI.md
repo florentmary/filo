@@ -24,8 +24,10 @@ Un amendement est souvent illisible pour qui n'est pas juriste : « à l'alinéa
 **Déroulé envisagé sur le hackathon.** Constitution d'un corpus de test d'amendements réels rattachés à leurs textes basé sur les données mises à disposition par l'assemblée nationale; mise en place du pipeline ETL sur Légifrance et les données AN ; génération du diff avant/après en langage clair ; conception et calcul de la grille de criticité ; interface de consultation sourcée.
 
 
-**Interface utilisateur.** L'utilisateur se connecte à une home page web. Il a accès aux noms des amemdements et à un bouton pour chacun d'entre eux. Quand il clique sur un bouton, il est redirigé vers une page avec un lien vers la page officielle de la base des amendements de l'assemblée nationale, un résumé textuel en langage compréhensible par tous expliquant en quoi il consiste, son but, et ce que ça implique. **Son positionnement est objectif et non partisant**. La page peut également proposer des graphiques et des chiffres pertinents.
+**Interface utilisateur.** L'utilisateur se connecte à une home page web. Il a accès aux noms des amemdements et à un bouton pour chacun d'entre eux. Quand il clique sur un bouton, il est redirigé vers une page avec un lien vers la page officielle de la base des amendements de l'assemblée nationale, un résumé textuel en langage compréhensible par tous expliquant en quoi il consiste, son but, et ce que ça implique. **Son positionnement est objectivant et non partisant**. La page peut également proposer des graphiques et des chiffres pertinents.
+Les pages sont chargées et stockées en amont. Elles ne se génèrent pas au clique de l'utilisateur.
 
+L'implémentation d'un chatbot supplémentaire sur la page des amendements est envisagé en V2.
 
 ### Image principale
 ![Image principale](images/cover.png)
@@ -37,7 +39,7 @@ Un amendement est souvent illisible pour qui n'est pas juriste : « à l'alinéa
 ### Ressources utilisées
 Cochez les ressources utilisées en remplaçant `[ ]` par `[x]`.
 
-- [ ] `openfisca-france-parameters` — Base de données de paramètres ✺ OpenFisca
+- [x] `openfisca-france-parameters` — Base de données de paramètres ✺ OpenFisca
 - [x] `an-dossiers-legislatifs` — Dossiers législatifs de l'Assemblée nationale (législature courante) ✺ Assemblée nationale
 - [x] `an-amendements-xvii` — Amendements déposés à l'Assemblée nationale (législature actuelle) ✺ Assemblée nationale
 - [ ] `an-comptes-rendus` — Comptes rendus de la séance publique à l'Assemblée nationale (législature actuelle) ✺ Assemblée nationale

@@ -2,30 +2,20 @@
 Filo IA — Décrypter l'enjeu réel d'un amendement
 
 ### Description courte
-Filo IA rend lisible, pour le citoyen comme pour le député, ce qu'un amendement change vraiment et à quel point c'est important. Pour chaque amendement : un comparatif avant/après en langage clair, l'identification de qui et quoi est concerné, et un score de criticité — le tout sourcé et vérifiable sur les textes officiels.
+Filo IA rend lisible, pour le citoyen comme pour le député, ce qu'un amendement, un article ou un projet de loi change vraiment. Pour chaque élément : un comparatif avant/après en langage clair, l'identification de qui et quoi est concerné, et un score de criticité — le tout sourcé et vérifiable sur les textes officiels.
 
 ### Porteur
 Filo IA - Florent M & Jessy D
 
 ### Description longue
-Un amendement est souvent illisible pour qui n'est pas juriste : « à l'alinéa 3, substituer aux mots… les mots… ». Impossible, pour un citoyen comme pour un député qui doit trier des centaines d'amendements, de saisir rapidement ce qui change réellement et l'ampleur de l'enjeu. Cette barrière nuit à la fois à la compréhension citoyenne de l'action parlementaire et à l'efficacité du travail législatif.
+Un projet de loi (PPL) est souvent illisible pour qui n'est pas juriste. Impossible, pour un citoyen comme pour un député qui doit trier des centaines d'amendements pour des dizaines d'articles, de saisir rapidement ce qui change réellement et l'ampleur de l'enjeu. Cette barrière nuit à la fois à la compréhension citoyenne de l'action parlementaire et à l'efficacité du travail législatif.
 
 **Ce que fait Filo IA.** L'outil prend un amendement et en restitue quatre éléments, chacun ancré sur le texte officiel :
 
-1. **Le diff avant / après en langage clair** — ce que dit la loi aujourd'hui face à ce qu'elle dirait si l'amendement était adopté, reformulé dans un français accessible.
+1. **Le diff avant / après en langage clair** — ce que dit la loi aujourd'hui face à ce qu'elle dirait si le PPL était adopté, reformulé dans un français accessible.
 2. **Qui et quoi est concerné** — extraction des populations, secteurs et acteurs impactés par la modification.
-3. **Un score de criticité multi-critères** — l'amendement touche-t-il un principe fondamental ? un large public ? un enjeu budgétaire important ? Une grille transparente hiérarchise l'enjeu réel plutôt que de le résumer.
+3. **Un score de criticité multi-critères** — Le projet de loi touche-t-il un principe fondamental ? un large public ? un enjeu budgétaire important ? Une grille transparente hiérarchise l'enjeu réel plutôt que de le résumer.
 4. **Les arguments pour / contre** (optionnel) — synthétisés à partir du débat parlementaire lui-même.
-
-**Approche technique.** Filo IA repose sur un modèle de langage renforcé d'un pipeline RAG (Retrieval-Augmented Generation) : le système se base d'abord les textes de référence pertinents (codes et lois consolidés via Légifrance, dossiers législatifs, amendements via les données ouvertes de l'Assemblée), puis génère ses réponses **uniquement à partir de ces sources** pour limiter les risques d'hallucinations.
-
-**Positionnement « IA de confiance ».** Filo IA ne tranche jamais à la place de l'usager et ne juge pas la valeur politique d'un amendement : il rend le texte lisible pour que chacun puisse juger par lui-même. La réponse est vérifiable par construction, et le score de criticité s'appuie sur des critères explicites et sourcés. L'outil sert ainsi deux usages : accélérer le tri parlementaire, et donner au citoyen les moyens de comprendre — et de vérifier — les enjeux d'un texte.
-
-**Déroulé envisagé sur le hackathon.** Constitution d'un corpus de test d'amendements réels rattachés à leurs textes basé sur les données mises à disposition par l'assemblée nationale; mise en place du pipeline ETL sur Légifrance et les données AN ; génération du diff avant/après en langage clair ; conception et calcul de la grille de criticité ; interface de consultation sourcée.
-
-
-**Interface utilisateur.** L'utilisateur se connecte à une home page web. Il a accès aux noms des amemdements et à un bouton pour chacun d'entre eux. Quand il clique sur un bouton, il est redirigé vers une page avec un lien vers la page officielle de la base des amendements de l'assemblée nationale, un résumé textuel en langage compréhensible par tous expliquant en quoi il consiste, son but, et ce que ça implique. **Son positionnement est objectivant et non partisant**. La page peut également proposer des graphiques et des chiffres pertinents.
-Les pages sont chargées et stockées en amont. Elles ne se génèrent pas au clique de l'utilisateur.
 
 L'implémentation d'un chatbot supplémentaire sur la page des amendements est envisagé en V2.
 

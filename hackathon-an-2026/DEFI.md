@@ -1,5 +1,5 @@
 ### Nom du défi
-Filo IA — Décrypter l'enjeu réel d'un amendement
+Filo IA — Décrypter l'enjeu réel d'un projet de loi
 
 ### Description courte
 Filo IA rend lisible, pour le citoyen comme pour le député, ce qu'un amendement, un article ou un projet de loi change vraiment. Pour chaque élément : un comparatif avant/après en langage clair, l'identification de qui et quoi est concerné, et un score de criticité — le tout sourcé et vérifiable sur les textes officiels.
